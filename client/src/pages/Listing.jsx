@@ -68,7 +68,7 @@ export default function Listing() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="fixed top-[13%] right-[3%] z-10 border rounded-full w-12 h-12 flex justify-center items-center bg-slate-100 cursor-pointer">
+          <div className="fixed top-[13%] right-[3%] z-10 border rounded-full w-12 h-12 flex justify-center items-center bg-stone-200 cursor-pointer">
             <FaShare
               className="text-slate-500"
               onClick={() => {
@@ -94,7 +94,7 @@ export default function Listing() {
               {listing.type === "rent" && " / month"}
             </p>
             <p className="flex items-center mt-6 gap-2 text-slate-600  text-sm">
-              <FaMapMarkerAlt className="text-green-700" />
+              <FaMapMarkerAlt className="text-red-700" />
               {listing.address}
             </p>
             <div className="flex gap-4">
@@ -111,7 +111,7 @@ export default function Listing() {
               <span className="font-semibold text-black">Description - </span>
               {listing.description}
             </p>
-            <ul className="text-green-900 font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6">
+            <ul className="text-red-900 font-semibold text-sm flex flex-wrap items-center gap-4 sm:gap-6">
               <li className="flex items-center gap-1 whitespace-nowrap ">
                 <FaBed className="text-lg" />
                 {listing.bedrooms > 1

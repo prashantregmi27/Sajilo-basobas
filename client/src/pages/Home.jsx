@@ -46,17 +46,13 @@ export default function Home() {
     fetchOfferListings();
   }, []);
   return (
-    <div className="">
+    <div className="bg-stone-200">
       {/* top */}
       <div className="flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto">
-        <h1 className="text-blue-700 font-bold text-3xl lg:text-6xl">
-          Discover our premier platform for
+        <h1 className="text-gray-700 font-bold text-3xl lg:text-6xl">
+          Unlock your ideal space with
           <br />
-          <span className="text-red-700"> Buying </span>,
-          <span className="text-red-700"> Selling </span>or
-          <span className="text-red-700"> Renting </span>
-          <br />
-          home
+          <span className="text-red-700"> just a few </span>click
         </h1>
         <div className="text-gray-700 text-xs sm:text-sm">
           Sajilo Basobas is the best place to find your next perfect place to
@@ -65,7 +61,7 @@ export default function Home() {
           we have a wide range of properties for you to choose from.
         </div>
         <Link to={"/search"} className="text-xs sm:text-sm font-bold">
-          <button className="bg-orange-700 text-white p-3 rounded-lg uppercase hover:bg-green-700">
+          <button className="bg-lime-700 text-white p-3 rounded-lg uppercase hover:bg-green-700">
             let's Start now...
           </button>
         </Link>
@@ -90,15 +86,15 @@ export default function Home() {
       </Swiper>
 
       {/* listing result for offer, sale and rent */}
-      <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 my-10">
+      <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 mt-10">
         {offerListings && offerListings.length > 0 && (
           <div className="">
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">
+              <h2 className="text-2xl font-semibold text-gray-700">
                 Recent offers
               </h2>
               <Link
-                className="text-sm text-blue-800 hover:underline"
+                className="text-sm text-red-800 hover:underline"
                 to={"/search?offer=true"}
               >
                 Show more offers
@@ -114,11 +110,11 @@ export default function Home() {
         {rentListings && rentListings.length > 0 && (
           <div className="">
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">
+              <h2 className="text-2xl font-semibold text-gray-700">
                 Recent places for rent
               </h2>
               <Link
-                className="text-sm text-blue-800 hover:underline"
+                className="text-sm text-red-800 hover:underline"
                 to={"/search?type=rent"}
               >
                 Show more places for rent
@@ -134,11 +130,11 @@ export default function Home() {
         {saleListings && saleListings.length > 0 && (
           <div className="">
             <div className="my-3">
-              <h2 className="text-2xl font-semibold text-slate-600">
+              <h2 className="text-2xl font-semibold text-gray-700">
                 Recent places for sale
               </h2>
               <Link
-                className="text-sm text-blue-800 hover:underline"
+                className="text-sm text-red-800 hover:underline"
                 to={"/search?type=sale"}
               >
                 Show more places for sale
